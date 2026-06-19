@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top navigation bar with title and search field -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <h1 class="app-title">🌤 Weather App</h1>
+      <form id="search-form" class="search-form">
+        <input
+          type="text"
+          id="city-input"
+          class="search-input"
+          placeholder="Search for a city..."
+          aria-label="City name"
+          required
+        >
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Error message area, hidden unless a search fails -->
+    <p id="error-message" class="error-message" hidden></p>
+
+    <!-- Loading indicator, shown while fetch requests are in progress -->
+    <p id="loading-message" class="loading-message" hidden>Loading...</p>
+
+    <!-- Hero section: current weather summary -->
+    <section id="current-weather" class="hero" hidden>
+      <p id="weather-icon" class="weather-icon">☀</p>
+      <h2 id="city-name" class="city-name">--</h2>
+      <p id="temperature" class="temperature">--°C</p>
+      <p id="description" class="description">--</p>
+    </section>
+
+    <!-- Stats row: humidity, wind speed, UV index -->
+    <section id="stats-row" class="stats-row" hidden>
+      <div class="stat-card">
+        <p class="stat-label">Humidity</p>
+        <p id="humidity" class="stat-value">--%</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Wind Speed</p>
+        <p id="wind-speed" class="stat-value">-- km/h</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">UV Index</p>
+        <p id="uv-index" class="stat-value">--</p>
+      </div>
+    </section>
+    <section id="forecast-section" class="forecast-section" hidden>
+      <h3 class="forecast-heading">5-Day Forecast</h3>
+      <div id="forecast-grid" class="forecast-grid">
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
