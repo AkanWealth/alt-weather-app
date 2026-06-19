@@ -20,4 +20,4 @@ Open `index.html` in a browser, or visit the GitHub Pages link below. No build s
 
 ## Live Demo
 
-[Add your GitHub Pages link here]
+https://akanwealth.github.io/alt-weather-app/
